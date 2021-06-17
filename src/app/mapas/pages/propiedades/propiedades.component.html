@@ -1,0 +1,24 @@
+<div class="row mt-3">
+    <div class="col-2"></div>
+    <div class="col">
+        <h1>Lista de propiedades</h1>
+    </div>
+</div>
+
+<div class="row container">
+    <div class="col-2"></div>
+    <div class="col">
+        <div class="row">
+            <div class="col-4 mb-2" 
+                *ngFor="let propiedad of propiedades; let i = index ">
+                <div class="card">
+                    <app-mini-mapa [lngLat]="propiedad.lngLat" class="card-img-top"></app-mini-mapa>
+                    <div class="card-body">
+                        <div class="card-title">{{ propiedad.titulo }}</div>
+                        <p class="card-tex">{{ propiedad.descripcion }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
